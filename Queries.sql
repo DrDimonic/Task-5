@@ -17,7 +17,7 @@ LEFT JOIN orders on customers.customer_id = orders.customer_id;
 -- c) Right JOIN
 -- List all products along with the suppliers who provide them, 
 -- including products that have no supplier listed.
-Correct query for Right Join, not supported in SQLite
+-- Correct query for Right Join, not supported in SQLite
 SELECT products.product_name, suppliers.supplier_name FROM products
 RIGHT JOIN product_suppliers on products.product_id = product_suppliers.product_id
 RIGHT JOIN suppliers on product_suppliers.supplier_id = suppliers.supplier_id;
@@ -31,7 +31,7 @@ LEFT JOIN suppliers on product_suppliers.supplier_id = suppliers.supplier_id;
 -- d) Full Outer JOIN
 -- Retrieve all employee names and departments, 
 -- including employees not assigned to any department and departments with no employees.
-Correct query for Full Outer Join, not supported in SQLite:
+-- Correct query for Full Outer Join, not supported in SQLite:
 SELECT employees.employee_name, departments.department_name FROM employees
 FULL OUTER JOIN departments on employees.department_id = departments.department_id;
 
@@ -188,7 +188,7 @@ CREATE TABLE if NOT EXISTS users (
 -- f) Adding a CHECK CONSTRAINT to an Existing TABLE
 -- Write a query to add a CHECK constraint to the employees 
 -- table to ensure that the salary is greater than 0.
-Correct query for adding a CHECK CONSTRAINT, not supported in SQLite:
+-- Correct query for adding a CHECK CONSTRAINT, not supported in SQLite:
 ALTER TABLE employees
 ADD CONSTRAINT check_salary
 CHECK (salary > 0);
